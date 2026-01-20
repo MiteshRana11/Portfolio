@@ -35,8 +35,6 @@ This is my personal portfolio website created to showcase my skills, projects, a
 ### Projects Section
 ![Projects Section](images/projects.png)
 
-> 📁 Put all images inside an **images** folder in your project  
-> Example: `portfolio/images/home.png`
 
 ---
 
@@ -46,5 +44,4 @@ This is my personal portfolio website created to showcase my skills, projects, a
 
 ---
 
-## 📂 Folder Structure
 
