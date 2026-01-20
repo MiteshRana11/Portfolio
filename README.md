@@ -40,7 +40,7 @@ This is my personal portfolio website created to showcase my skills, projects, a
 
 ## 🚀 Live Demo
 
-🔗 [View Portfolio](https://your-portfolio-link.netlify.app)
+🔗 [View Portfolio](https://miteshranaportfolio.netlify.app/)
 
 ---
 
