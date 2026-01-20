@@ -24,19 +24,6 @@ This is my personal portfolio website created to showcase my skills, projects, a
 
 ---
 
-## 📷 Screenshots
-
-### Home Page
-![Home Page](images/home.png)
-
-### About Section
-![About Section](images/about.png)
-
-### Projects Section
-![Projects Section](images/projects.png)
-
-
----
 
 ## 🚀 Live Demo
 
