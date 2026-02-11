@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Mitesh Rana | Web Developer </title>
+    <title>Mitesh Rana | Web Developer</title>
 
-    <meta name="description" content="Mitesh Rana - Web Developer skilled in HTML, CSS, JavaScript, React. Actively looking for internship opportunities.">
+    <meta name="description"
+        content="Mitesh Rana - Web Developer skilled in HTML, CSS, JavaScript, React. Actively looking for internship opportunities.">
     <meta name="keywords" content="Web Developer, HTML CSS JavaScript, React, Portfolio">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -42,7 +44,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 15px 10%;
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(15px);
             z-index: 1000;
         }
@@ -65,6 +67,8 @@
 
         .theme-toggle {
             cursor: pointer;
+            font-size: 1.2rem;
+            user-select: none;
         }
 
         header {
@@ -74,6 +78,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            padding: 0 10%;
         }
 
         header h1 {
@@ -108,17 +113,23 @@
         #about img {
             width: 260px;
             border-radius: 50%;
-            box-shadow: 0 0 30px rgba(0,229,255,0.6);
+            box-shadow: 0 0 30px rgba(0, 229, 255, 0.6);
         }
 
         .info-card {
             margin-top: 20px;
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             padding: 20px;
             border-radius: 15px;
         }
 
-        #skills {
+        /* Skills Section Fix */
+        #skills h2 {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .skills-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -134,7 +145,7 @@
             height: 130px;
             width: 130px;
             border-radius: 50%;
-            background: conic-gradient(#00e5ff var(--percent), rgba(255,255,255,0.1) 0);
+            background: conic-gradient(#00e5ff var(--percent), rgba(255, 255, 255, 0.1) 0);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -151,9 +162,14 @@
             font-weight: bold;
         }
 
+        #projects h2 {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
         .projects {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 25px;
         }
 
@@ -177,7 +193,7 @@
         .overlay {
             position: absolute;
             inset: 0;
-            background: rgba(0,229,255,0.85);
+            background: rgba(0, 229, 255, 0.85);
             color: #111;
             display: flex;
             flex-direction: column;
@@ -185,10 +201,22 @@
             align-items: center;
             opacity: 0;
             transition: 0.4s;
+            text-align: center;
+            padding: 15px;
         }
 
         .project:hover .overlay {
             opacity: 1;
+        }
+
+        .overlay p {
+            margin-top: 8px;
+            font-weight: 600;
+        }
+
+        #contact h2 {
+            text-align: center;
+            margin-bottom: 25px;
         }
 
         form {
@@ -199,11 +227,12 @@
             gap: 15px;
         }
 
-        form input, form textarea {
+        form input,
+        form textarea {
             padding: 12px;
             border-radius: 10px;
             border: none;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             color: #fff;
         }
 
@@ -219,133 +248,187 @@
         footer {
             text-align: center;
             padding: 20px;
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
         }
 
         @media (max-width: 768px) {
-            nav ul { display: none; }
-            #about { flex-direction: column; text-align: center; }
-            header h1 { font-size: 2.2rem; }
+            nav ul {
+                display: none;
+            }
+
+            #about {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header h1 {
+                font-size: 2.2rem;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<nav>
-    <div class="logo">Mitesh Rana | Web Developer</div>
-    <ul>
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="theme-toggle">🌙</div>
-</nav>
+    <nav>
+        <div class="logo">Mitesh Rana | Web Developer</div>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="theme-toggle"></div>
+    </nav>
 
-<header id="home">
-    <h1>Hello, I'm <span class="typing"></span></h1>
-    <p>Web Developer </p>
-    <div style="margin-top:20px; display:flex; gap:15px;">
-        <a href="#projects" class="btn">View Projects</a>
-        <a href="resume.pdf" class="btn" download>Download Resume</a>
-    </div>
-</header>
-
-<section id="about">
-    <img src="me.jpg" alt="Mitesh Rana">
-    <div>
-        <h2>About Me</h2>
-        <p>
-            I am a Web Developer enthusiast pursuing BE Engineering (3rd Semester) with a Diploma in Computer Engineering (CGPA 7.71).
-            I build responsive and clean websites using HTML, CSS, JavaScript, and React.  
-            I am actively seeking a Web Development Internship to work on real projects and grow professionally.
-        </p>
-
-        <div class="info-card">
-            <p><b>Name:</b> Mitesh Rana</p>
-            <p><b>Role:</b> Web Developer </p>
-            <p><b>Email:</b><a href="https://ranamitesh082@gmail.com" target="_blank" >ranamitesh082@gmail.com</a></p>
-            <p><b>Location:</b> Ahmedabad, India</p>
+    <header id="home">
+        <h1>Hello, I'm <span class="typing"></span></h1>
+        <p>Web Developer</p>
+        <div style="margin-top:20px; display:flex; gap:15px; flex-wrap:wrap; justify-content:center;">
+            <a href="#projects" class="btn">View Projects</a>
+            <a href="resume.pdf" class="btn" download>Download Resume</a>
         </div>
-    </div>
-</section>
+    </header>
 
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="skill"><div class="outer" style="--percent:85%;"><div class="inner">85%</div></div>HTML</div>
-    <div class="skill"><div class="outer" style="--percent:80%;"><div class="inner">80%</div></div>CSS</div>
-    <div class="skill"><div class="outer" style="--percent:70%;"><div class="inner">70%</div></div>JavaScript</div>
-    <div class="skill"><div class="outer" style="--percent:60%;"><div class="inner">60%</div></div>React</div>
-</section>
+    <section id="about">
+        <img src="me.jpg" alt="Mitesh Rana">
+        <div>
+            <h2>About Me</h2>
+            <p>
+                I am a Web Developer enthusiast pursuing BE Engineering (3rd Semester) with a Diploma in Computer
+                Engineering (CGPA 7.71).
+                I build responsive and clean websites using HTML, CSS, JavaScript, and React.
+                I am actively seeking a Web Development Internship to work on real projects and grow professionally.
+            </p>
 
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-        <a href="https://github.com/MiteshRana11/Snack-Game" target="_blank" class="project">
-            <img src="https://code-projects.org/wp-content/uploads/2020/04/3-1.png">
-            <div class="overlay">
-                <h3>Snake Game</h3>
-                <p>• Python</p>
+            <div class="info-card">
+                <p><b>Name:</b> Mitesh Rana</p>
+                <p><b>Role:</b> Web Developer</p>
+                <p><b>Email:</b> <a href="mailto:ranamitesh082@gmail.com">ranamitesh082@gmail.com</a></p>
+                <p><b>Location:</b> Ahmedabad, India</p>
             </div>
-        </a>
-        <a href="https://github.com/MiteshRana11/Sports-Complex-Bookings-System" target="_blank" class="project">
-            <img src="SCBS.png">
-            <div class="overlay">
-                <h3>Sports Complex Booking</h3>
-                <p>HTML • CSS • JS • PHP</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+
+        <div class="skills-grid">
+            <div class="skill">
+                <div class="outer" style="--percent:85%;">
+                    <div class="inner">85%</div>
+                </div>
+                HTML
             </div>
-        </a>
-    </div>
-</section>
 
-<section id="contact">
-    <h2>Contact Me</h2>
+            <div class="skill">
+                <div class="outer" style="--percent:80%;">
+                    <div class="inner">80%</div>
+                </div>
+                CSS
+            </div>
 
-    <div style="text-align:center; margin-bottom:20px;">
-        <a href="https://github.com/MiteshRana11" target="_blank">GitHub</a> |
-        <a href="https://linkedin.com/in/Miteshrana11" target="_blank">LinkedIn</a> 
-    </div>
+            <div class="skill">
+                <div class="outer" style="--percent:70%;">
+                    <div class="inner">70%</div>
+                </div>
+                JavaScript
+            </div>
 
-    <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-</section>
+            <div class="skill">
+                <div class="outer" style="--percent:60%;">
+                    <div class="inner">60%</div>
+                </div>
+                React
+            </div>
+        </div>
+    </section>
 
-<footer>
-    <p>&copy; 2025 Mitesh Rana | Web Developer</p>
-</footer>
+    <section id="projects">
+        <h2>Projects</h2>
 
-<script>
-const texts = ["Mitesh Rana", "Web Developer", "Frontend Developer"];
-let i = 0, j = 0, current = "", typing = document.querySelector(".typing");
+        <div class="projects">
 
-function type() {
-    if (j < texts[i].length) {
-        current += texts[i][j];
-        typing.textContent = current;
-        j++;
-        setTimeout(type, 100);
-    } else setTimeout(erase, 1500);
-}
+            <!-- Project 1 -->
+            <a href="https://github.com/MiteshRana11/Snack-Game" target="_blank" class="project">
+                <img src="https://code-projects.org/wp-content/uploads/2020/04/3-1.png" alt="Snake Game">
+                <div class="overlay">
+                    <h3>Snake Game</h3>
+                    <p>Python</p>
+                </div>
+            </a>
 
-function erase() {
-    if (j > 0) {
-        current = current.slice(0, -1);
-        typing.textContent = current;
-        j--;
-        setTimeout(erase, 50);
-    } else {
-        i = (i + 1) % texts.length;
-        setTimeout(type, 500);
-    }
-}
-type();
-</script>
+            <!-- Project 2 -->
+            <a href="https://github.com/MiteshRana11/Sports-Complex-Bookings-System" target="_blank" class="project">
+                <img src="https://private-user-images.githubusercontent.com/138429649/483465904-0e6f97c0-217d-4073-a09e-c0134bba76b6.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzA4MDkwODMsIm5iZiI6MTc3MDgwODc4MywicGF0aCI6Ii8xMzg0Mjk2NDkvNDgzNDY1OTA0LTBlNmY5N2MwLTIxN2QtNDA3My1hMDllLWMwMTM0YmJhNzZiNi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMjExJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDIxMVQxMTE5NDNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hY2NmY2UzZmVlZTQ1YzUxZmEwNGUxZTU4ZDc4NzA0N2IzZThkZDE0YmNlOWZjODc1MzNiZmMxMTZhNzgzMGU2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.9gTy6tcePwamA_TuBESFtDyzLLbT1AeANIwQq6GmFIc"
+                    src="SCBS.png" alt="Sports Complex Booking">
+                <div class="overlay">
+                    <h3>Sports Complex Booking System</h3>
+                    <p>HTML • CSS • JavaScript • PHP</p>
+                </div>
+            </a>
+
+            <!-- Project 3 (NEW) -->
+            <a href="https://github.com/MiteshRana11/Insurance-Charges-Prediction-ML" target="_blank" class="project">
+                <img src="https://private-user-images.githubusercontent.com/138429649/548177545-d057a590-8b59-4a5c-94c7-08674cc7a0b1.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzA4MDg3MjksIm5iZiI6MTc3MDgwODQyOSwicGF0aCI6Ii8xMzg0Mjk2NDkvNTQ4MTc3NTQ1LWQwNTdhNTkwLThiNTktNGE1Yy05NGM3LTA4Njc0Y2M3YTBiMS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMjExJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDIxMVQxMTEzNDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1kMjM0ODE0MWEyNTU5M2U2MjU3NTFmNGM2Njc1MzczYzkxZmEwZjNkYjJlY2I1MmQwMWM3NjE3OTUwMGJhZDZiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.P7qVq6UqdHbW8DyEr2rgfM6tL2VJyhSujmLD6icuNc4"
+                    src="ICP.png" alt="Insurance Charges Prediction">
+                <div class="overlay">
+                    <h3>Insurance Charges Prediction</h3>
+                    <p>Python • Machine Learning • Streamlit</p>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <div style="text-align:center; margin-bottom:20px;">
+            <a href="https://github.com/MiteshRana11" target="_blank">GitHub</a> |
+            <a href="https://linkedin.com/in/Miteshrana11" target="_blank">LinkedIn</a>
+        </div>
+
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mitesh Rana | Web Developer</p>
+    </footer>
+
+    <script>
+        const texts = ["Mitesh Rana", "Web Developer", "Frontend Developer"];
+        let i = 0, j = 0, current = "", typing = document.querySelector(".typing");
+
+        function type() {
+            if (j < texts[i].length) {
+                current += texts[i][j];
+                typing.textContent = current;
+                j++;
+                setTimeout(type, 100);
+            } else setTimeout(erase, 1500);
+        }
+
+        function erase() {
+            if (j > 0) {
+                current = current.slice(0, -1);
+                typing.textContent = current;
+                j--;
+                setTimeout(erase, 50);
+            } else {
+                i = (i + 1) % texts.length;
+                setTimeout(type, 500);
+            }
+        }
+        type();
+    </script>
 
 </body>
+
 </html>
