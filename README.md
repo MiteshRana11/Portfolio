@@ -27,7 +27,7 @@ This is my personal portfolio website created to showcase my skills, projects, a
 
 ## 🚀 Live Demo
 
-🔗 [View Portfolio](https://miteshranaportfolio.netlify.app/)
+🔗 [View Portfolio](https://mitesh-rana.netlify.app/)
 
 ---
 
